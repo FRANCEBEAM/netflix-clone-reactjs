@@ -9,6 +9,10 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import Account from "./pages/Account";
+
+// import { AuthContextProvider } from './context/AuthContext';
 
 
 
@@ -24,6 +28,14 @@ const router = createBrowserRouter([
       {
         path: "signin",
         element: <SignIn />,
+      },
+      {
+        path: "signup",
+        element: <SignUp />,
+      },
+      {
+        path: "account",
+        element: <Account />,
       },
     ],
   },

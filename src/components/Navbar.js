@@ -16,7 +16,11 @@ const Navbar = () => {
                     Sign In
                 </Link>
             </button>
-            <button className='bg-red-600 px-6 py-2 rounded cursor-pointer text-white'>Sign Up</button>
+            <button className='bg-red-600 px-6 py-2 rounded cursor-pointer text-white'>
+                <Link to="/signup">
+                    Sign Up
+                </Link>
+            </button>
         </div>
     </div>
   )
