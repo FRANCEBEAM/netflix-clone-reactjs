@@ -1,10 +1,11 @@
 import React from 'react';
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import { AuthContextProvider } from './context/AuthContext';
+
 import { BrowserRouter as Router, Routes, Route, Link }from "react-router-dom";
 
-
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
@@ -16,7 +17,7 @@ const AppLayout = () => {
 
   return(
     <>
-    <App />
+    <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
@@ -29,7 +30,7 @@ const AppLayout = () => {
 
 
 ReactDOM.render(
-  <Router basename='/'>
+  <Router basename='/netflix-clone-reactjs'>
     <AppLayout />
   </Router>,
   document.getElementById('root')
